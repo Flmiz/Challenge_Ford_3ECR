@@ -1,0 +1,133 @@
+#content-header {
+    margin: 43px 0;
+}
+
+#content-header h1 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 35px;
+
+    text-transform: uppercase;
+
+    color: #616161;
+}
+
+#progress-bar {
+    padding: 47px;
+}
+
+#progress-bar img {
+    margin: 0 auto;
+    display: block;
+}
+
+#content {
+    display: flex;
+}
+
+#main-panel {
+    border-right: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+    flex-grow: 1;
+}
+
+.left-margin {
+    padding-left: 70px;
+}
+
+#main-panel h3 {
+    font-weight: 700;
+
+    /* identical to box height */
+    text-transform: uppercase;
+
+    color: #1B394E;
+}
+
+#main-panel h5 {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 11px 0;;
+
+    color: #616161;
+}
+
+#main-panel h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    color: #616161;
+
+    margin: 31px 0;
+}
+
+#main-panel h2 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #616161;
+}
+
+#main-panel #paying-methods {
+    background: #F9F9F9;
+    border-top: 1px solid #DBDBDB;
+    padding-bottom: 60px;
+}
+
+#side-bar {
+    flex-grow: 4;
+    text-align: center;
+}
+
+/* Menu de pagamento */
+select {
+    width: 875px;
+    appearance: none;
+
+    background-color: #fff;
+    border: none;
+    border-left: 5px solid #008CBA;
+    border-right: 5px solid #008CBA;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    
+    padding: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #616161;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Card de pagamento */
+
+#payment-card {
+    margin: 28px 0;
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+    padding: 0 20px 20px 20px;
+    display: inline-flex;
+}
+
+#payment-card label {
+    margin-top: 20px;
+    display: block;
+}
+
+#payment-card input {
+    width: 270px;
+    height: 32px;
+    margin-top: 13px;
+    display: block;
+}
+
+#payment-card .flexbox-item {
+    margin-left: 23px;
+}
