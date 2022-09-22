@@ -1,16 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+:root {
+    --font-destaque: 'Inter', sans-serif;
+}
+
 #content-header {
-    margin: 43px 0;
+    padding: 43px 70px;
+    font-family: var(--font-destaque);
+    border-bottom: 1px solid #DBDBDB;
 }
 
 #content-header h1 {
     text-align: center;
-    font-weight: 200;
     font-size: 36px;
     line-height: 35px;
+    font-weight: 200;
 
     text-transform: uppercase;
 
     color: #616161;
+}
+
+#content-header svg {
+    color: var(--cor-primaria);
+}
+
+#content-header p {
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    display: inline-block;
+    margin-left: 26px;
+
+    color: #0078A0;
 }
 
 #progress-bar {
@@ -80,11 +102,28 @@
 
 #side-bar {
     flex-grow: 4;
+    padding: 0 81px;  
+}
+
+#side-bar h2 {
+    font-size: 2.25rem;
+    font-weight: 200;
+    color: var(--cor-texto);
+}
+
+#botao-lateral {
+    margin-top: 16px;
+    padding: 20px;
     text-align: center;
+    background: var(--cor-primaria);
+    color: #FFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-size: 1rem;
 }
 
 /* Menu de pagamento */
-select {
+#method-selector {
     width: 875px;
     appearance: none;
 
@@ -121,11 +160,29 @@ select::-ms-expand {
     display: block;
 }
 
-#payment-card input {
+#payment-card input, #payment-card select {
     width: 270px;
     height: 32px;
     margin-top: 13px;
-    display: block;
+    display: inline-block;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 3px;
+    padding: 0;
+}
+
+#payment-card #month {
+    width: 50px;
+    background: #FFF;
+    margin-right: 14px;
+}
+
+#payment-card  #year  {
+    width: 76px;
+    background: #FFF;
+}
+
+#payment-card #codigo-seguranca {
+    width: 100px;
 }
 
 #payment-card .flexbox-item {

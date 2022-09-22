@@ -70,6 +70,13 @@
         <section>
 
             <div id="content-header">
+                <a href="">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <p>
+                        Voltar ao site
+                    </p>
+                </a>
+                
                 <h1>
                     Método de pagamento
                 </h1>
@@ -80,7 +87,7 @@
             </div>
 
             <section id="content">
-                <div id="main-panel">
+                <section id="main-panel">
                     <div class="left-margin">
                         <h3>RANGER XL Cabine Simples 2.2 Diesel 4x4 MT 2023</h3>
                         <h5>Modelo: XXXXXX-XXX</h5>
@@ -101,22 +108,27 @@
                                     <label for="">Número do cartão:</label>
                                     <input type="text">
                                     <label for="">Código de Segurança:</label>
-                                    <input type="text">
+                                    <input id="codigo-seguranca" type="text">
                                 </div>
                                 <div class="flexbox-item">
                                     <label for="">CPF do titular:</label>
                                     <input type="text">
                                     <label for="">Data de expiração:</label>
-                                    <input type="month">
+                                    <select name="" id="month"></select>
+                                    <select name="" id="year"></select>
                                 </div>
                                 
                             </form>
                         </div>
                     </div>
-                </div>
-                <div id="side-bar">
+                </section>
+                <section id="side-bar">
                     <h2>R$ 000.000</h2>
-                </div>
+
+                    <div id="botao-lateral">
+                        Continuar
+                    </div>
+                </section>
             </section>
             
         </section> <!-- Fim do conteudo do site -->
@@ -124,10 +136,10 @@
         <!-- Início do Footer -->
         <footer> 
             <div id="texto-legal">
-                <h4>
+                <h3>
                     Texto Legal
                     <i class="fa-solid fa-chevron-up"></i>
-                </h4>           
+                </h3>           
             </div>
 
             <div class="search">
