@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 :root {
     --font-destaque: 'Inter', sans-serif;
@@ -51,11 +53,11 @@
 #main-panel {
     border-right: 1px solid #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
-    flex-grow: 1;
 }
 
-.left-margin {
-    padding-left: 70px;
+.content-margin {
+    width: 875px;
+    padding: 0px 70px;
 }
 
 #main-panel h3 {
@@ -101,8 +103,8 @@
 }
 
 #side-bar {
-    flex-grow: 4;
     padding: 0 81px;  
+    flex-grow: 1;
 }
 
 #side-bar h2 {
@@ -111,23 +113,74 @@
     color: var(--cor-texto);
 }
 
-#botao-lateral {
+.botao-lateral {
+    cursor: pointer;
+    width: 100%;
     margin-top: 16px;
     padding: 20px;
     text-align: center;
-    background: var(--cor-primaria);
-    color: #FFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     font-size: 1rem;
 }
 
+.botao-primario {
+    background: var(--cor-primaria);
+    color: #FFF;
+}
+
+.botao-secundario {
+    background: #fff;
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+
+#botao-lateral:hover {
+    background: var(--cor-texto-destaque)
+}
+
+/* Perfil */
+#perfil {
+    text-align: center;
+    margin-top: 39px;
+    color: var(--cor-texto);
+    font-family: var(--font-destaque);
+    font-weight: 400;
+}
+
+#perfil h5 {
+    padding: 15px 0 16px 0;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+    font-family: var(--font-destaque);
+    font-weight: 400;
+}
+
+#perfil .info {
+    text-align: left;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+#perfil img {
+    margin: 23px 0 19px 0;
+}
+
 /* Menu de pagamento */
 #method-selector {
+    display: inline-block;
+    background: #fff;
+    background-color: #fff;
+}
+
+#method-selector select {
     width: 875px;
     appearance: none;
 
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     border-left: 5px solid #008CBA;
     border-right: 5px solid #008CBA;
@@ -145,46 +198,84 @@ select::-ms-expand {
     display: none;
 }
 
+.chevron {
+    display: inline-block;
+    background: url("../images/chevron-down-solid.svg") no-repeat right 15px center;
+    background-size: 2.5%;
+}
+
 /* Card de pagamento */
 
-#payment-card {
-    margin: 28px 0;
+.payment-card, .card {
     background-color: #fff;
     border: 1px solid #DBDBDB;
     padding: 0 20px 20px 20px;
-    display: inline-flex;
+    display: inline-block;
 }
 
-#payment-card label {
+.card {
+    border-left: 5px solid #008CBA;
+    min-width: 300px;
+}
+
+.payment-card {
+    margin: 28px 0;
+}
+
+.flex {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.payment-card label, .card p {
     margin-top: 20px;
     display: block;
 }
 
-#payment-card input, #payment-card select {
+.payment-card input, .payment-card select {
     width: 270px;
-    height: 32px;
     margin-top: 13px;
     display: inline-block;
     border: 2px solid var(--cor-primaria);
     border-radius: 3px;
-    padding: 0;
+    padding: 8px 5px;
+    background-color: #fff;
+
+    font-family: var(--font-destaque);
+    color: var(--cor-texto-destaque);
 }
 
-#payment-card #month {
+.payment-card #month {
     width: 50px;
     background: #FFF;
     margin-right: 14px;
 }
 
-#payment-card  #year  {
+.payment-card  #year  {
     width: 76px;
     background: #FFF;
 }
 
-#payment-card #codigo-seguranca {
+.payment-card #codigo-seguranca {
     width: 100px;
 }
 
-#payment-card .flexbox-item {
+.payment-card .flexbox-item {
     margin-left: 23px;
+}
+
+.payment-card #parcela {
+    width: 100%;
+    display: block;
+}
+
+/* Pagina de revisão */
+
+.mudar-pagamento {
+    text-decoration: underline;
+    margin: 15px 0 0 0;
+}
+
+.borda-superior {
+    text-align: center;
 }

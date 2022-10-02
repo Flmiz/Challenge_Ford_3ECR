@@ -78,7 +78,7 @@
                 </a>
                 
                 <h1>
-                    Método de pagamento
+                    Revisão de informações
                 </h1>
             </div>
 
@@ -93,43 +93,18 @@
                         <h5>Modelo: XXXXXX-XXX</h5>
                     </div>
                     
-                    <div id="paying-methods" class="content-margin">
-                        <h4>Opções de pagamento</h4>
-
-                        <span id="method-selector">
-                            <span class="chevron">
-                                <select id="pagamento" >
-                                    <option onclick="definirMetodo()" value="credito">Cartão de crédito</option>
-                                    <option onclick="definirMetodo()" value="debito">Cartão de débito</option>
-                                </select>
-                            </span>
-                        </span>
-
-                        <div>
-                            <form id="cartao" class="payment-card" action="">
-                                <div class="flex">
-                                    <div class="flexbox-item">
-                                        <label for="nome">Nome impresso no cartão:</label>
-                                        <input id="nome" type="text">
-                                        <label for="numero-cartao">Número do cartão:</label>
-                                        <input id="numero-cartao" type="text" maxlength="16" oninput="formatarNumeros(this)">
-                                        <label for="codigo-seguranca">Código de Segurança:</label>
-                                        <input id="codigo-seguranca" type="text" maxlength="3" oninput="formatarNumeros(this)">
-                                    </div>
-                                    <div class="flexbox-item">
-                                        <label for="cpf">CPF do titular:</label>
-                                        <input id="cpf" type="text" teste="11" maxlength="11" oninput="formatarNumeros(this)">
-                                        <label for="dada-expiracao">Data de expiração:</label>
-                                        <select id="month"></select>
-                                        <select id="year"></select>
-                                    </div>
-                                </div>
-                                <div id="parcelas" class="flexbox-item">
-                                    <label for="">Parcelas:</label>
-                                    <select id="parcela" name="" id="year"></select>
-                                </div>               
-                            </form>
-                        </div>       
+                    <div id="paying-methods" class="content-margin flex">
+                        <div id="dados-pessoal">
+                            <h4>Informações pessoais</h4>
+                            <div class="card">
+                                <p>teste</p>
+                            </div>
+                        </div>
+                        <div">
+                            <h4>Forma de pagamento</h4>
+                            <div id="dados-pagamento" class="card">
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section id="side-bar">
@@ -417,9 +392,6 @@
             </section>
         </footer> <!-- Fim do Footer -->
     </body>
-    
-    <script src="../js/metodo_de_pagamento.js"></script>
-    <script src="../js/vencimento.js"></script>
-    <script src="../js/formatar_inputs.js"></script>
+
     <script src="../js/dados_compra.js"></script>
 </html>
