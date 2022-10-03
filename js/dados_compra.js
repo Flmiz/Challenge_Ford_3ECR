@@ -1,54 +1,56 @@
 function varificarDados() {
-    let metodo = document.querySelector("#pagamento").value
+    let metodo = document.querySelector("#pagamento")
     let dados = new Map();
 
-    if (metodo === "credito" || metodo === "debito") {
-        let nome = document.querySelector("#nome")
-        let cpf = document.querySelector("#cpf")
-        let cartao = document.querySelector("#numero-cartao")
-        let codigoSeguranca = document.querySelector("#codigo-seguranca")
-        let month = document.querySelector("#month")
-        let year = document.querySelector("#year")
-        let parcela = document.querySelector("#parcela")
-        console.log(year.maxLength)
-
-        verificarCartao(cartao.value);
-
-        dados.set("nome", nome)
-        dados.set("cpf", cpf)
-        dados.set("cartao", cartao)
-        dados.set("codigo_seguranca", codigoSeguranca)
-        dados.set("mes", month)
-        dados.set("ano", year)
-        if (metodo === "credito") {
-            dados.set("parcelas", parcela)
-        }
-        
-        var valido = true
-
-        dados.forEach(key => {
-            if (key.value === "" || key.maxLength !== undefined && key.maxLength !== -1 && key.value.length !== key.maxLength) {
-                key.style.border = "2px solid red"
-                key.style.boxShadow = "0px 0px 4px red"
-                valido = false
+    if (metodo) {
+        if (metodo.value === "credito" || metodo.value === "debito") {
+            let nome = document.querySelector("#nome")
+            let cpf = document.querySelector("#cpf")
+            let cartao = document.querySelector("#numero-cartao")
+            let codigoSeguranca = document.querySelector("#codigo-seguranca")
+            let month = document.querySelector("#month")
+            let year = document.querySelector("#year")
+            let parcela = document.querySelector("#parcela")
+            console.log(year.maxLength)
+    
+            verificarCartao(cartao.value);
+    
+            dados.set("nome", nome)
+            dados.set("cpf", cpf)
+            dados.set("cartao", cartao)
+            dados.set("codigo_seguranca", codigoSeguranca)
+            dados.set("mes", month)
+            dados.set("ano", year)
+            if (metodo.value === "credito") {
+                dados.set("parcelas", parcela)
+            }
+            
+            var valido = true
+    
+            dados.forEach(key => {
+                if (key.value === "" || key.maxLength !== undefined && key.maxLength !== -1 && key.value.length !== key.maxLength) {
+                    key.style.border = "2px solid red"
+                    key.style.boxShadow = "0px 0px 4px red"
+                    valido = false
+                }
+                else {
+                    key.style.border = "2px solid var(--cor-primaria)"
+                    key.style.boxShadow = "none"
+                }
+            })
+    
+            if (!valido) {
+                alert("Campos preenchidos incorretamente.") 
             }
             else {
-                key.style.border = "2px solid var(--cor-primaria)"
-                key.style.boxShadow = "none"
-            }
-        })
-
-        if (!valido) {
-            alert("Campos preenchidos incorretamente.") 
+                for (const [key, value] of dados) {
+                    dados.set(key, value.value)
+                }         
+                dados.set("tipo", metodo.value)
+    
+                salvarDados(dados)
+            }   
         }
-        else {
-            for (const [key, value] of dados) {
-                dados.set(key, value.value)
-            }         
-            dados.set("tipo", metodo)
-
-            salvarDados(dados)
-        }   
     }
 }
 
@@ -103,6 +105,30 @@ function recuperarDados() {
 
         div.append(retornar)
         dadosPagamento.append(div)
+    }
+}
+
+function tipoEntrega() {
+    console.log("tipoEntrega")
+    let radioDiv = document.querySelector("#entrega")
+    if (radioDiv) {
+        let radio = radioDiv.querySelectorAll("input")
+        var valido = false
+        radio.forEach(input => {
+            if (input.checked) {
+                sessionStorage.setItem("entrega", input)
+                valido = true
+            }
+            else {
+
+            }
+        })
+    }
+    if (valido) {
+        location.href = "../pages/pagamento_confirmado.html"
+    }
+    else {
+        alert("Selecione um método de entrega válido")
     }
 }
 

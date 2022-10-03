@@ -56,8 +56,11 @@
 }
 
 .content-margin {
-    width: 875px;
     padding: 0px 70px;
+}
+
+.main-size {
+    width: 875px;
 }
 
 #main-panel h3 {
@@ -176,7 +179,7 @@
     background-color: #fff;
 }
 
-#method-selector select {
+#method-selector select, .radio {
     width: 875px;
     appearance: none;
 
@@ -203,6 +206,19 @@ select::-ms-expand {
     background: url("../images/chevron-down-solid.svg") no-repeat right 15px center;
     background-size: 2.5%;
 }
+
+/* Radio Button */
+
+.radio {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 25px;
+ }
+
+ .radio p {
+    padding-left: 15px;
+ }
 
 /* Card de pagamento */
 
