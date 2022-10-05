@@ -244,9 +244,17 @@ select::-ms-expand {
     justify-content: space-between;
 }
 
-.payment-card label, .card p {
+.payment-card label {
     margin-top: 20px;
     display: block;
+}
+
+.card {
+    padding-top: 20px;
+}
+
+.card p {
+    margin-top: 5px;
 }
 
 .payment-card input, .payment-card select {

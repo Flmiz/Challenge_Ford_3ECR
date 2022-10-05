@@ -78,8 +78,7 @@ function recuperarDados() {
     let dadosCliente = document.querySelector("#dados-cliente");
     if (dadosCliente) {
         let nome = document.createElement("p");
-        nome.innerText =
-            sessionStorage.getItem("nome") + localStorage.getItem("sobrenome");
+        nome.innerText = sessionStorage.getItem("nome");
         let email = document.createElement("p");
         email.innerText = sessionStorage.getItem("email");
 
@@ -104,6 +103,7 @@ function recuperarDados() {
             dadosPagamento.append(textoExpiracao);
 
             if (tipo === "credito") {
+                let br = document.createElement("br");
                 var parcelas = parseInt(sessionStorage.getItem("parcelas"));
                 var precoParcela =
                     parseFloat(preco.innerText.replace(".", "")) / parcelas;
@@ -112,6 +112,7 @@ function recuperarDados() {
                     parcelas === 1
                         ? `À vista de R$ ${precoParcela.toFixed(2)}`
                         : `${parcelas}x parcelas de R$ ${precoParcela.toFixed(2)}`;
+                dadosPagamento.append(br);
                 dadosPagamento.append(textoParcelas);
             }
         }
