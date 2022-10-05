@@ -95,10 +95,9 @@
                     
                     <div id="paying-methods">
                         <div class="content-margin main-size flex">
-                            <div id="dados-pessoal">
+                            <div>
                                 <h4>Informações pessoais</h4>
-                                <div class="card">
-                                    <p>teste</p>
+                                <div id="dados-cliente" class="card">
                                 </div>
                             </div>
                             <div>
@@ -128,7 +127,7 @@
                 <section id="side-bar">
                     <h2>R$ <span id="preco">100.000</span></h2>
 
-                    <button onclick="tipoEntrega()" class="botao-lateral botao-primario" href="">
+                    <button onclick="confirmarCompra()" class="botao-lateral botao-primario" href="">
                         Confirmar compra
                     </button>
 
@@ -139,7 +138,7 @@
                             <p class="bold">Localização:</p>
                             <p>Bahia</p>
                         </div>
-                        <button onclick="tipoEntrega()" class="botao-lateral botao-secundario" href="">
+                        <button class="botao-lateral botao-secundario" href="">
                             Enviar mensagem
                         </button>
                     </div>
@@ -411,6 +410,7 @@
         </footer> <!-- Fim do Footer -->
     </body>
 
+    <script src="../js/autenticar.js"></script>
     <script src="../js/formatar_inputs.js"></script>
     <script src="../js/dados_compra.js"></script>
 </html>

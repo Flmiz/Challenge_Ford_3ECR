@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            input {
+                border: 1px solid #939393;
+            }
+        </style>
+    </head>
+
+    <body style="display: flex;">
+        <div id="cadastro" style="margin: 20px;">
+            <h3>Cadastrar</h3>
+            <label for="">Nome</label>
+            <input id="nome" style="display: block;" type="text">
+            <label for="">Sobrenome</label>
+            <input id="sobrenome" style="display: block;" type="text">
+            <label for="">E-mail</label>
+            <input id="cadastro-email" style="display: block;" type="text">
+            <label for="">Senha</label>
+            <input id="cadastro-senha" style="display: block;" type="text">
+            <button onclick="cadastrarCliente()" id="cadastro" style="margin-top: 10px; display: inline-block;">Cadastrar</button>
+        </div>
+        <div id="login" style="margin: 20px;">
+            <h3>Logar</h3>
+            <label for="">E-mail</label>
+            <input id="login-email" style="display: block;" type="text">
+            <label for="">Senha</label>
+            <input id="login-senha" style="display: block;" type="text">
+            <button onclick="verificarCliente()" id="login" style="margin-top: 10px; display: inline-block;">Cadastrar</button>
+        </div>
+    </body>
+
+    <script src="../js/autenticar.js"></script>
+</html>
