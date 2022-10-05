@@ -57,11 +57,14 @@ function finalizarCompra(credenciais, callback) {
 function cadastrarCliente(credenciais, callback) {
     let sql = `insert into clientes (nome, sobrenome, email, senha)
     select "${credenciais.nome}", "${credenciais.sobrenome}", "${credenciais.email}", "${credenciais.senha}"
-    from clientes
     where not exists (
         select *
         from clientes
         where email = "${credenciais.email}"
+    )
+    or not exists (
+        select 1 
+        from clientes
     )
     limit 1;`
 
