@@ -1,10 +1,10 @@
-### Executar os seguintes comandos no diretório node
+### Executar os seguintes comandos dentro do diretório node
 npm i --save express <br />
 npm i --save cors <br />
 npm i --save mysql2 <br />
 npm i --save nodemailer <br />
 <br />
-node ./node/main.js <br />
+node ./main.js <br />
 
 ### Executar os seguintes comando no mysql
 CREATE USER 'nodejs'@'localhost' IDENTIFIED BY 'ford'; <br />
