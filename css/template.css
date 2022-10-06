@@ -12,6 +12,7 @@
     --cor-background-escuro: #252525;
     --cor-footer-redes-sociais: #1B394E;
     --cor-footer-copyright: #868686;
+    --cor-background: #002D4D;
     --cor-texto-footer-h3: #DFDFDF;
 }
 
@@ -20,6 +21,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    border: 0px;
 }
 
 /* estilo da página
@@ -59,21 +61,28 @@ a {
 header{
     height: 52px;
     padding: 18px 35px 0px 75px;
-    background-color: var(--cor-branco);
+    background-color: var(--cor-background);
     margin: 0 auto;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
 }
 
-header a:link, a:visited {
-    color: var(--cor-primaria);
+header a {
+    font-size: 1.375rem;
+    margin-top: 5px;
+    padding: 3px 10px;
+    color: var(--cor-branco);
 }
 
-header a:hover, a:active {
+header .navbar a:link, header #navbar a:visited {
+    color: var(--cor-branco);
+    margin-right: 82px;
+}
+
+header .navbar a:hover, header .navbar a:active {
     color: var(--cor-texto-destaque);
-}
-
-header a:active {
-    border: 1px solid var(--cor-primaria);
+    background-color: var(--cor-branco);
+    border-radius: 5px;
+    height: 100%;
 }
 
 .logo {
@@ -82,16 +91,18 @@ header a:active {
 }
 
 #main-nav {
+    display: inline-flex;
+    justify-content: space-between;
     width: calc(99% - 190px);
     margin-top: 3px;
+    height: 100%;
     padding-bottom: 15px;
-    float: right;
     line-height: 1.5;
     color: var(--cor-primaria);
 }
 
 .search-icon {
-    padding: 2px 10px;
+    padding: 2px 10px 2px 0px;
     display: inline-block;
 }
 
@@ -100,16 +111,21 @@ header .navbar {
     font-size: 1.125rem;
 }
 
-header ul li span {
-    padding: 0 .625rem;
-    line-height: 1.6rem;
+header .utilities {
+    font-size: 0.9375rem;
 }
 
-header .utilities {
-    font-weight: 400;
-    font-size: 0.9375rem;
-    float: right;
+header .utilities a {
+    margin-left: 10px;
 }
+
+header .utilities .autenticar {
+    background-color: #FFF;
+    color: var(--cor-background);
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
 
 /* formatando Footer
 ////////////////////////////////////*/
@@ -246,6 +262,7 @@ footer .logo {
 footer #copyright {
     height: 36px;
     padding: 25px;
+    background-color: var(--cor-background);
 }
 
 footer #copyright ul {
@@ -265,7 +282,7 @@ footer #copyright a {
     line-height: 1rem;
     font-size: 0.8125rem;
     font-weight: 200;
-    color: var(--cor-footer-copyright)
+    color: var(--cor-branco)
 }
 
 footer i {
