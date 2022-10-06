@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 /* variáveis 
 ////////////////////////////////////*/
 :root {
@@ -14,6 +16,8 @@
     --cor-footer-copyright: #868686;
     --cor-background: #002D4D;
     --cor-texto-footer-h3: #DFDFDF;
+
+    --font-header: 'Open Sans', sans-serif;
 }
 
 /* limpando estilo do browser
@@ -34,7 +38,7 @@ body {
     width: 100%;
     max-width: 1440px;
     margin: 0px auto;
-    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-family: var(--font-header);
     border-left: 1px solid var(--cor-borda);
     border-right: 1px solid var(--cor-borda);
 }
@@ -43,10 +47,9 @@ body {
 ////////////////////////////////////*/
 ul {
     list-style-type: none;
-}
-
-ul li {
-    float: left;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* formatação geral dos links
@@ -56,11 +59,18 @@ a {
     display: inline-block;
 }
 
+/* Estilo navegação em abas
+////////////////////////////////////*/
+
+#veiculos .veiculos a, #vender .vender a, #sobre .sobre a {
+    background-color: var(--cor-branco);
+    color: var(--cor-texto-destaque);
+}
+
 /* definindo estilo do header
 ////////////////////////////////////*/
 header{
-    height: 52px;
-    padding: 18px 35px 0px 75px;
+    padding: 0px 40px;
     background-color: var(--cor-background);
     margin: 0 auto;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
@@ -68,37 +78,32 @@ header{
 
 header a {
     font-size: 1.375rem;
-    margin-top: 5px;
-    padding: 3px 10px;
     color: var(--cor-branco);
 }
 
 header .navbar a:link, header #navbar a:visited {
+    padding: 20px 41px;
     color: var(--cor-branco);
-    margin-right: 82px;
 }
 
 header .navbar a:hover, header .navbar a:active {
     color: var(--cor-texto-destaque);
     background-color: var(--cor-branco);
-    border-radius: 5px;
-    height: 100%;
 }
 
 .logo {
-    width: 150px;
-    display: inline;
+    margin-top: 16px;
+    width: 165px;
+    overflow: hidden;
 }
 
 #main-nav {
     display: inline-flex;
     justify-content: space-between;
-    width: calc(99% - 190px);
-    margin-top: 3px;
-    height: 100%;
-    padding-bottom: 15px;
-    line-height: 1.5;
+    width: 100%;
     color: var(--cor-primaria);
+    align-items: center;
+    height: 100%;
 }
 
 .search-icon {
@@ -116,16 +121,25 @@ header .utilities {
 }
 
 header .utilities a {
-    margin-left: 10px;
+    margin-left: 40px;
 }
 
 header .utilities .autenticar {
+    padding: 3px 12px;
+    margin-left: 15px;
+    border-radius: 5px;
+
     background-color: #FFF;
     color: var(--cor-background);
-    border-radius: 5px;
-    margin-left: 15px;
 }
 
+header .utilities .autenticar:hover {
+    color: #FFF;
+    border: 1px solid var(--cor-branco);
+    background-color: var(--cor-background);
+
+    
+}
 
 /* formatando Footer
 ////////////////////////////////////*/
